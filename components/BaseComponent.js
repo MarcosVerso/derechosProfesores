@@ -5,14 +5,11 @@ export class BaseComponent extends HTMLElement{
     }
 
     connectedCallback() {
-        const origin = window.location.origin;
-    const pathname = window.location.pathname;
+        const folderName = this.constructor._folderName;
+        const cssPath = `${folderName}/style.css`;
 
-    // Aseguramos que el pathname termine en barra si no lo hace, y limpiamos dobles barras
-    const basePath = pathname.endsWith('/') ? pathname : `${pathname}/`;
-    const cssPath = `${origin}${basePath}components/${this.constructor._folderName}/style.css`;
 
-    console.log("Cargando CSS desde:", cssPath);
+        console.log(cssPath);
         this.shadowRoot.innerHTML = `
             <style>
                 @import url("${cssPath}");

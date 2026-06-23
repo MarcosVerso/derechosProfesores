@@ -12,7 +12,7 @@ export class BaseComponent extends HTMLElement{
         console.log(cssPath);
         this.shadowRoot.innerHTML = `
             <style>
-                @import url("https://github.com/MarcosVerso/derechosProfesores/${cssPath}");
+                @import url("${cssPath}");
             </style>
             ${this.html()}
         `;

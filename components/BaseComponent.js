@@ -6,18 +6,13 @@ export class BaseComponent extends HTMLElement{
 
     connectedCallback() {
         const folderName = this.constructor._folderName;
-        const origin = window.location.origin;
-    const pathname = window.location.pathname;
-
-    // Aseguramos que el pathname termine en barra si no lo hace, y limpiamos dobles barras
-    const basePath = pathname.endsWith('/') ? pathname : `${pathname}/`;
-    const cssPath = `${origin}${basePath}components/${folderName}/style.css`;
+        const cssPath = `../components/${folderName}/style.css`;
 
 
         console.log(cssPath);
         this.shadowRoot.innerHTML = `
             <style>
-                @import url("${cssPath}");
+                @import url("/${cssPath}");
             </style>
             ${this.html()}
         `;

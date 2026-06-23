@@ -3,7 +3,10 @@ import { HeaderComponent } from "../HeaderComponent/index.js";
 
 export class AppComponent extends BaseComponent{
     html(){
-        return `<header-c>`;
+        return `
+            <header-c></header-c>
+            
+        `;
     }
 };
 

@@ -10,7 +10,7 @@ export class BaseComponent extends HTMLElement{
 
     // Aseguramos que el pathname termine en barra si no lo hace, y limpiamos dobles barras
     const basePath = pathname.endsWith('/') ? pathname : `${pathname}/`;
-    const cssPath = `${origin}${basePath}components/${this.constructor.folderName}/style.css`;
+    const cssPath = `${origin}${basePath}components/${this.constructor._folderName}/style.css`;
 
     console.log("Cargando CSS desde:", cssPath);
         this.shadowRoot.innerHTML = `

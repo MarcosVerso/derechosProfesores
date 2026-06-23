@@ -6,7 +6,7 @@ export class BaseComponent extends HTMLElement{
 
     connectedCallback() {
         const folderName = this.constructor._folderName;
-        const cssPath = `/components/${folderName}/style.css`;
+        const cssPath = `https://marcosverso.github.io/derechosProfesores/components/${folderName}/style.css`;
 
 
         console.log(cssPath);

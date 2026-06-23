@@ -4,7 +4,7 @@ export class HeaderComponent extends BaseComponent{
     html(){
         return `
             <div class="header">
-                <img src="../../img/image.png">
+                <img src="img/image.png">
                 <div class="text-group">
                     <h4>PORTAL DOCENTE:</h4>
                     <h1>Deberes y <span class="amarillo">Derechos</span> de los Docentes</h1>

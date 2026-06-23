@@ -6,13 +6,13 @@ export class BaseComponent extends HTMLElement{
 
     connectedCallback() {
         const folderName = this.constructor._folderName;
-        const cssPath = `../components/${folderName}/style.css`;
+        const cssPath = `${folderName}/style.css`;
 
 
         console.log(cssPath);
         this.shadowRoot.innerHTML = `
             <style>
-                @import url("${cssPath}");
+                @import url("https://marcosverso.github.io/derechosProfesores/${cssPath}");
             </style>
             ${this.html()}
         `;
